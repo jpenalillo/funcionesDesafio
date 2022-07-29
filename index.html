@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <title>Document</title>
+</head>
+<body>
+   <div class="ele1" id="ele1" onclick="cambiaColor(1)"></div>
+   <div class="ele2"  id="ele2"  onclick="cambiaColor(2)"></div>
+   <div class="ele3" id="ele3"  onclick="cambiaColor(3)"></div>
+   <div class="ele4"  id="ele4"  onclick="cambiaColor(4)"></div>
+   <script>
+    var color;
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'a') {
+        /* Cambiar a color 1 */
+            color = 'violet';
+
+        } else if (event.key === 's') {
+        /* Cambiar a color 2 */
+            color = 'yellow';
+        }else if(event.key === 'd'){
+            color = 'white';
+        }
+        
+    })
+
+    function cambiaColor(a){
+        document.getElementById('ele' + a).style.backgroundColor = color;
+    }
+   </script>
+</body>
+</html>
